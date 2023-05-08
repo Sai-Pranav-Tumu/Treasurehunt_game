@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>The lost Golden city</title>
+</head>
+<body>
+    <div>
+        <div class="navv">
+            <nav class="navbar">
+                <a class="navbar-brand" >The lost Golden city</a>
+                <button class=" btn-outline-success me-2" id="instructionsButton" type="button" onclick="showMessage()">Instructions</button>
+                <button id="lo" type="submit" onclick="logg()" style="margin-right: 10px;">logout</button>
+                <div id="message-container">
+                  <div id="message-box">
+                    <p id="message-text"></p>
+                    <button onclick="hideMessage()">Close</button>
+                  </div>
+                </div>
+            </nav>
+        </div>        
+        <div>
+              <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images\Krishna.jpg" class="d-block w-100" alt="..." onclick="showForm('form1')">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images\tsunami.jpg" class="d-block w-100" alt="..." onclick="showForm('form2')">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images\tunnel1.jpg" class="d-block w-100" alt="..." onclick="showForm('form3')">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images\dwaraka2.jpg" class="d-block w-100" alt="..." onclick="showForm('form4')">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images\dwaraka3.jpg" class="d-block w-100" alt="..." onclick="showForm('form5')">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div>
+              <!-- Form 1 -->
+              <form id="form1" class="formm">
+                <h5>
+                  Story:
+                  <br>
+                  Ohh it seams there is a new Explorer to find the Golden city. Well Hello Explorer Iam Sai here to guid you in the
+                  process. First letus see If you are capabel of exploring dwaraka or not. For that u need to answer this 
+                  General question.
+                  <br>
+                </h5>
+                <label for="question">Question:</label>
+                <h4 id="question">Find the person in image.</h4>
+                <img src="images/mount.jpeg" style="width: 30rem; height: 30rem;" alt="find">
+                <div id="toggle-para1">Show Clues</div>
+                <p id="hidden-para1">
+                  He is a Us president
+                </p>
+                <label for="answer1">Answer:</label>
+                <input id="answer1" name="answer1"  placeholder="Enter your answer here" style="margin-bottom: 1rem;"></input>
+                <br>
+                <input type="submit" value="Submit">
+              </form>
+              
+              <!-- Form 2 -->
+              <form id="form2" class="formm">
+                <h5>
+                  Story:
+                  <br>
+                  Exiting U have reached this far, that indicates you are one of them who are born to explore.
+                  Now I belive in you. you can find a way to the lost city, But first you need to know about the history of 
+                  DWARAKA. Listen to the video carfully.
+                  <br>
+                </h5>
+
+                <label for="question">Question:</label>
+                <h4 id="question">What is the name of the king who attacked on dwaraka in a flying machine?</h4>
+                <a href="https://www.youtube.com/watch?v=RtZNFG50ciA&t=1213s" target="_blank">please this video and answer the question</a>
+                <br>
+                <div id="toggle-para2">Show Clues</div>
+                <p id="hidden-para2">
+                  option a: Dristadhyumna
+                  option b: Salva
+                  option c: Jarasandh
+                  option d: dhuryodhana
+                </p>
+
+                <label for="answer2">Answer:</label>
+                <input id="answer2" name="answer2" placeholder="Enter your answer here" style="margin-bottom: 1rem;"></input>
+                <br>
+                <input type="submit" value="Submit">
+              </form>
+              
+              <!-- Form 3 -->
+              <form id="form3" class="formm">
+                <h5>
+                  Story:
+                  <br>
+                  Explorer only intelegence will not be enough in this exploration. you need to know about some explorers 
+                  who are searching for this city from many years their experience may help you the way. Jhosh is one of the
+                  best I saw. I recommend to listen to him carfully.  
+                  <br>
+                </h5>
+                <label for="question">Question:</label>
+                <h4 id="question">Jhosh gates mentioned dwaraka as ________ city?</h4>
+                <a href="https://www.youtube.com/watch?v=RtZNFG50ciA&t=1213s" target="_blank">please this video and answer the question</a>
+                <div id="toggle-para3">Show Clues</div>
+                <p id="hidden-para3">
+                  search in vedio description
+                </p>
+                <label for="answer3">Answer:</label>
+                <input id="answer3" name="answer3"  placeholder="Enter your answer here" style="margin-bottom: 1rem;"></input>
+                <br>
+                <input type="submit" value="Submit">
+              </form>
+
+              <!-- Form 4 -->
+              <form id="form4" class="formm">
+                <h5>
+                  Story:
+                  <br>
+                  Explorer you need to listen to this. Just now I have discovered something. At the east side of temple
+                  which is not allowed for people to go. Their there is an invisible door. Which will open when you say the 
+                  answer to the bellow question. 
+                  <br>
+                </h5>
+                <label for="question">Question:</label>
+                <h4 id="question">Who build this temple?</h4>
+                <h4>latitude and longitude:22°14'16.39"N 68°58'3.22"E</h4>
+                <div id="toggle-para4">Show Clues</div>
+                <p id="hidden-para4">
+                  Search in temple wikipedia
+                </p>
+                <label for="answer4">Answer:</label>
+                <input id="answer4" name="answer4"  placeholder="Enter your answer here" style="margin-bottom: 1rem;"></input>
+                <br>
+                <input type="submit" value="Submit">
+              </form>
+
+              <!-- Form 5 -->
+              <div id="form5" class="formm">
+                <h5>
+                  Story:
+                  <br>
+                  We are very close to it. Inside the invisible door their is a tunnel which lead to a screat door whcih will
+                  open when you solve this puzzel. Good luck explorer. 
+                  <br>
+                </h5>
+                <h1>Sliding Puzzle</h1>
+                <div id="tiles"></div>
+              </div>
+              
+              <div id="myModal" class="modal">
+                <div class="modal-dialog">
+                  <div class="modal-content" style="width: 700px;">
+                    <!-- Modal header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title">Instructions</h4>
+                      <button type="button" class="close" data-dismiss="modal" onclick="hideMessage()">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <!-- Add your instructions here -->
+                      <p>
+                        This game is about one of the ancient advanced civilised city's exploration "DWARAKA"
+                        <br>
+                        Here these are the game rules:
+                        <br>
+                        1. Each image represents a level respectively such as image1 -> level1, image2 -> level2.
+                        <br>
+                        2. To access a level all the below levels of it should be completed. Like to play lvl3, explorer need to complete lvl1 and lvl2.
+                        <br>
+                        3. Each lvl is started when you click on the lvl-image. when image is clicked A form appears at the bottom of image.
+                        <br>
+                        4. When a level is complete press on the rightside slider on image and go to next image. Start next level by pressing on next image
+                        <br>
+                        5. Each form contains a story, question, clue, answer. Use clues to answer correctly. when explorer answers correctly next level unlocks and next level is played by clicking next image.
+                      </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button id="modalButton" type="button" class="" onclick="hideMessage()">Understood</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
