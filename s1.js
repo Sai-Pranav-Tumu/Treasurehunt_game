@@ -47,10 +47,7 @@ function register () {
 
     // Push to Firebase Database
     database_ref.child('users/' + user.uid).set(user_data)
-
-    // DOne
-    localStorage.setItem("userId", user.uid);
-    window.location.replace("home.html");
+    
     alert('User Created!!')
   })
   .catch(function(error) {

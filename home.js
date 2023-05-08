@@ -199,7 +199,7 @@ for (let i = 1; i <= numberOfForms; i++) {
       // const userId = localStorage.getItem('userId');
       // var t;
 
-      database.ref(`users/${userId}/level`).set(tt);
+      database.ref(`users/${userId}/level`).set(tt+1);
       tt++;
       currentForm++;
       form.style.display = "none";
