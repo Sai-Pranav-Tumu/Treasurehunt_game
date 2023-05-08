@@ -26,15 +26,18 @@ var tt;
 
 const userId = localStorage.getItem('userId'); // Replace with the actual user ID
 
-firebase.database().ref(`users/${userId}`).once("value")
-  .then((snapshot) => {
-    const userData = snapshot.val();
-    tt=userData.level;
-    console.log(tt);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+if (userId) {
+  firebase.database().ref(`users/${userId}`).once("value")
+    .then((snapshot) => {
+      const userData = snapshot.val();
+      tt=userData.level;
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+} else {
+  console.error("User ID not found in local storage");
+}
 
 function showForm(formId) {
   if (formId === `form${currentForm}`) {
@@ -195,6 +198,7 @@ for (let i = 1; i <= numberOfForms; i++) {
     if (answer === formAnswers[formId]) {
       // const userId = localStorage.getItem('userId');
       // var t;
+
       database.ref(`users/${userId}/level`).set(tt);
       tt++;
       currentForm++;
